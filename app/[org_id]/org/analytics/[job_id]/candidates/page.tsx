@@ -61,9 +61,7 @@ export default function JobCandidatesPage() {
       setJob(jobData);
 
       // Fetch analytics for this specific job to get applications
-      const analyticsData = await jobsAPI.getAnalytics(orgId, {
-        jobId: jobId,
-      });
+      const analyticsData = await jobsAPI.getAnalytics(orgId);
 
       const jobAnalytics = analyticsData.find((j: any) => j.job_id === jobId);
       
